@@ -48,7 +48,8 @@ public class InMemoryUserRepositoryImpl implements UserRepository {
     @Override
     public List<User> getAll() {
         log.info("getAll");
-        return repository.values().stream().sorted().collect(Collectors.toList());
+        return repository.values().stream()
+                .sorted().collect(Collectors.toList());
     }
 
     @Override
